@@ -1,0 +1,21 @@
+Frontend with React
+Install necessary packages: npm install aws-amplify aws-amplify-react @material-ui/core @material-ui/icons react-router-dom
+Setup Amplify in your React App (src/utils/amplify.js):
+import Amplify from 'aws-amplify';
+import config from '../aws-exports';
+
+Amplify.configure(config);
+
+export { Amplify };
+
+Example Component for Posting Content (src/components/PostContent.js):
+import React, { useState } from 'react';
+import { Amplify, API, graphqlOperation } from 'aws-amplify';
+import { createPost } from '../graphql/mutations';
+
+function PostContent() {
+      const [content, setContent] = useState('');
+        const [videoUrl, setVideoUrl] = useState('');
+
+          const handleSubmit = async ()
+}
